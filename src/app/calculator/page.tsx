@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import Keyboard from "../components/Keyboard";
-import Screen from "../components/Screen";
+import Keyboard from "./components/Keyboard";
+import Screen from "./components/Screen";
 import { log } from "console";
 
 export interface FunctionOBject {
@@ -22,7 +22,7 @@ export default function Calculator() {
 	const fucntions = {
 		handleClick: (value: any) => {
 			if (isDone) setDigit("");
-			
+
 			let input = value.target.value;
 			setDigit(`${digit === "" ? input : digit + input}`);
 		},
@@ -42,10 +42,10 @@ export default function Calculator() {
 				case "+":
 					result = arg1 + arg2;
 					setDigit(result.toString());
-					setDone(true)
-					
+					setDone(true);
+
 					setPreviousOperand(`${storedValue} + ${digit}`);
-					
+
 					break;
 				case "-":
 					result = arg1 - arg2;

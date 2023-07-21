@@ -1,4 +1,4 @@
-import { FunctionOBject } from "../calculator/page";
+import { FunctionOBject } from "../page";
 
 interface CalcButtonProps {
 	text: string;
@@ -8,9 +8,7 @@ interface CalcButtonProps {
 	functions: FunctionOBject;
 }
 
-
-
-function check(text:any, functions: FunctionOBject) {
+function check(text: any, functions: FunctionOBject) {
 	switch (text) {
 		case "C":
 			return functions.handleClear;
@@ -27,7 +25,6 @@ function check(text:any, functions: FunctionOBject) {
 		default:
 			return functions.handleClick;
 	}
-
 }
 
 export default function CalcButton({
@@ -39,9 +36,7 @@ export default function CalcButton({
 }: CalcButtonProps) {
 	return (
 		<button
-			onClick={
-				check(text, functions)
-			}
+			onClick={check(text, functions)}
 			value={text}
 			className={`w-[3.5rem] h-[3.5rem] flex items-center justify-center rounded-full shadow-sm shadow-gray-950 ${
 				type !== "operator"

@@ -1,8 +1,6 @@
-
 import { useState } from "react";
-import { FunctionOBject } from "../calculator/page";
+import { FunctionOBject } from "../page";
 import CalcButton from "./CalcButton";
-
 
 const buttons = [
 	{
@@ -113,7 +111,6 @@ interface KeyBoardProps {
 }
 
 export default function Keyboard({ handleClick, functions }: KeyBoardProps) {
-	
 	return (
 		<div className="h-[368px] grid grid-rows-5 grid-cols-4 gap-2 rounded-xl bg-gray-900">
 			{buttons.map((button) => (

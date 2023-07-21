@@ -1,9 +1,9 @@
 import { table } from "console";
 import Image from "next/image";
-import Card from "./components/Card";
+import Card from "./calculator/components/Card";
 
 export default function Home() {
-  return (
+	return (
 		<div className="h-screen">
 			<table className=" border-separate border-spacing-10">
 				<thead></thead>
@@ -19,9 +19,8 @@ export default function Home() {
 							}
 						</td>
 					</tr>
-
 				</tbody>
 			</table>
 		</div>
-  );
+	);
 }

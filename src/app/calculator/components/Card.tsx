@@ -24,7 +24,10 @@ export default function Card({ title, image_url, description }: CardProps) {
 				<p className="pt-5 px-3 text-sm">{description}</p>
 			</div>
 			<div className=" p-3 buttons w-full flex space-x-4 justify-center">
-				<Button text="Código" url="" />
+				<Button
+					text="Código"
+					url="https://github.com/claudi-tm/boracodar/tree/main/src/app/calculator"
+				/>
 				<Button text="Ver" url="./calculator" />
 			</div>
 		</div>
